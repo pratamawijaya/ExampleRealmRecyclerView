@@ -20,5 +20,6 @@ ext {
   thirdParty = [databaseRealm : "io.realm:realm-android:${realm}",
                 timber        : "com.jakewharton.timber:timber:${timber}",
                 materialDialog: "com.github.afollestad.material-dialogs:core:0.8.5.4@aar",
-                butterknife   : "com.jakewharton:butterknife:${butterknife}"]
+                butterknife   : "com.jakewharton:butterknife:${butterknife}",
+                floatingMenu  : "com.github.clans:fab:1.6.2"]
 }

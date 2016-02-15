@@ -7,7 +7,7 @@
 		android:id="@+id/container"
 		android:layout_height="match_parent"
 		android:fitsSystemWindows="true"
-		tools:context="com.pratamawijaya.examplerealm.MainActivity">
+		tools:context=".view.MainActivity">
 
 	<android.support.design.widget.AppBarLayout
 			android:layout_height="wrap_content"
@@ -25,12 +25,28 @@
 
 	<include layout="@layout/content_main"/>
 
-	<android.support.design.widget.FloatingActionButton
-			android:id="@+id/fab"
+	<com.github.clans.fab.FloatingActionMenu
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_gravity="bottom|end"
 			android:layout_margin="@dimen/fab_margin"
-			android:src="@drawable/ic_add_white_18dp"/>
+			android:layout_gravity="bottom|end">
+
+		<com.github.clans.fab.FloatingActionButton
+				android:layout_width="wrap_content"
+				android:src="@drawable/ic_book_white_18dp"
+				app:fab_label="Add Book"
+				android:id="@+id/fab_add_book"
+				app:fab_size="mini"
+				android:layout_height="wrap_content"/>
+
+		<com.github.clans.fab.FloatingActionButton
+				android:layout_width="wrap_content"
+				app:fab_label="Add Category"
+				android:src="@drawable/ic_note_add_white_18dp"
+				android:id="@+id/fab_add_category"
+				app:fab_size="mini"
+				android:layout_height="wrap_content"/>
+
+	</com.github.clans.fab.FloatingActionMenu>
 
 </android.support.design.widget.CoordinatorLayout>
