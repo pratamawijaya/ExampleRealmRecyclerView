@@ -224,6 +224,6 @@ public class MainActivity extends AppCompatActivity
   }
 
   @Override public void onItemClick(Book book) {
-    Toast.makeText(MainActivity.this, book.getName(), Toast.LENGTH_SHORT).show();c
+    Toast.makeText(MainActivity.this, book.getName(), Toast.LENGTH_SHORT).show();
   }
 }
