@@ -12,10 +12,15 @@ import timber.log.Timber;
  * Project : ExampleRealm
  */
 public class App extends Application {
+  private static final long DB_VERSION = 1;
+
   @Override public void onCreate() {
     super.onCreate();
     RealmConfiguration realmConfiguration =
-        new RealmConfiguration.Builder(this).migration(new Migration()).build();
+        new RealmConfiguration.Builder(this).name("pratama_book.realm")
+            .schemaVersion(DB_VERSION)
+            .migration(new Migration())
+            .build();
     Realm.setDefaultConfiguration(realmConfiguration);
 
     if (BuildConfig.DEBUG) Timber.plant(new Timber.DebugTree());

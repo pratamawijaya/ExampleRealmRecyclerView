@@ -30,6 +30,7 @@ dependencies {
 
   compile supportDependencies.design
   compile supportDependencies.appCompat
+  compile supportDependencies.cardView
 
   compile thirdParty.databaseRealm
   compile thirdParty.butterknife
