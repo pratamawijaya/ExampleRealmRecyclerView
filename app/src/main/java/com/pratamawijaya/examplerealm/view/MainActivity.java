@@ -196,8 +196,11 @@ public class MainActivity extends AppCompatActivity
 
   @Override protected void onStart() {
     super.onStart();
+
     categoryRealmResults = realm.where(Category.class).findAllAsync();
+
     bookRealmResults = realm.where(Book.class).findAllAsync();
+
     bookRealmResults.addChangeListener(realmChangeBookListener);
     categoryRealmResults.addChangeListener(realmChangeCategoryListener);
 
